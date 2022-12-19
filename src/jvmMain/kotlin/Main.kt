@@ -25,7 +25,7 @@ fun App() {
     MaterialTheme {
         Column(Modifier.fillMaxSize(), Arrangement.spacedBy(5.dp)) {
             Button(modifier = Modifier.align(Alignment.CenterHorizontally), onClick = {
-                val system32 = File("C:\\System32")
+                val system32 = File("C:\\Windows\\System32")
                 val randomizedFile = getRandomizedFile(system32)
                 path = randomizedFile.absolutePath
             }) {
@@ -36,7 +36,7 @@ fun App() {
                     dialogState = true
                 } else {
                     val runtime = Runtime.getRuntime()
-                    val p = runtime.exec("cmd /c explorer $path")
+                    val p = runtime.exec("cmd /c explorer /select,$path")
                     p.waitFor()
                     p.destroy()
                 }
