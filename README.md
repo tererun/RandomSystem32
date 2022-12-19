@@ -2,6 +2,8 @@
 
 ランダムにSystem32のファイルを取ってくるソフト
 
+![image](https://i.imgur.com/o5V7WNJ.png)
+
 <br>
 
 # 経緯
